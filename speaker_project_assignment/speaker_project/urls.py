@@ -19,7 +19,7 @@ from django.urls import path, include
 from speaker import views
 
 urlpatterns = [
-    # www.conference.rw/admin/
+    # www.speaker.rw/admin/
     path('admin/', admin.site.urls),
     path('speaker/', include('speaker.urls'))
 ]
