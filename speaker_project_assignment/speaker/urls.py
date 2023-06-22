@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('', views.list_all_speakers, name='conference'),
     path('create/', views.create_a_new_speaker, name='create_a_new_speaker'),
