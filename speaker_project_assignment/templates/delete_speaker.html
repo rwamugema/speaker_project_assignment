@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Speaker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            font-weight: bold;
+            color: red;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-group button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .cancel-button {
+            background-color: #ccc;
+            color: #ffffff;
+            background-color: #999;
+        }
+
+        .confirm-button {
+            background-color: #d9534f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Delete Speaker</h1>
+        <p class="warning">Are you sure you want to delete the speaker "{{ speaker.0.id }}"?</p>
+        <div class="button-group">
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="confirm-button">Delete</button>
+            </form>
+            <a href="{% url 'speaker_list' %}" class="cancel-button">Cancel</a>
+        </div>
+    </div>
+</body>
+
+</html>
