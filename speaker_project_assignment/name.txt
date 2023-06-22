@@ -4,6 +4,6 @@ Name: Rwamugema Japhet
 Registration: 221000803
 Department: CS
 
-Name: 
-Registration:
+Name: NZIBUKA Emmanuel
+Registration: 221007995
 Department: CS
